@@ -1,0 +1,26 @@
+ .chat-window {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px, solid #ccc;
+  overflow: hidden;
+
+ }
+ .chat-container{
+   flex-grow: 1;
+   display: flex;
+ }
+ .home-container{
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+ }
+.sidebar{
+  position: relative;
+  
+  background: linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
+  padding: 20px;
+ }
+
+

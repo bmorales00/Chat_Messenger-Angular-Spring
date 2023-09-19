@@ -1,0 +1,16 @@
+<nb-layout>
+  <nb-layout-header>
+    <img class="profile-picture" [src]="userPP" alt="Profile Picture">
+    <nb-user [name]="user.username" [showInitials]="false"></nb-user>
+      <button class="fas fa-ellipsis-v vertical-dots-button" [nbContextMenu]="items">
+      </button> 
+  </nb-layout-header>
+  <nb-layout-column>
+    <nb-list>
+      <nb-list-item *ngFor="let friend of userFriends" (click)="currentChat(friend.chatId, friend)">
+          <img class="profile-picture" [src]="friend.imgUrl">
+          <nb-user [name]="friend.username" [showInitials]="false"></nb-user>         
+      </nb-list-item>        
+    </nb-list>
+  </nb-layout-column>
+</nb-layout>

@@ -1,0 +1,34 @@
+<div class="background">
+    <header >
+        <h1> Crow Messenger Sign-Up</h1>
+        <div class="logo-container">
+            <img src="assets/img/logo.png"  class="logo">
+        </div>
+    </header>
+    <div class = "signup-container">
+        <h2>Create an Account</h2>
+        <form (ngSubmit)="submitForm()" enctype="multipart/form-data">
+            <div class ="form-group">
+                <label for="username">UserName</label>
+                <input type="text" id="username"[(ngModel)] ="newUser.username" name="username" required (blur)="onNameBlur()" [class.invalid]="isFieldInvalid('username')" [class.filled]="newUser.username !==''">
+                <div *ngIf="isFieldInvalid('username')" class = "error-message">Username is required</div>
+            </div>
+            <div class ="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email"[(ngModel)] ="newUser.email" name="email" required (blur)="onEmailBlur()" [class.invalid]="isFieldInvalid('email')" [class.filled]="newUser.email !==''">
+                <div *ngIf="isFieldInvalid('email')" class = "error-message">Email is required</div>
+            </div>
+            <div class ="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password"[(ngModel)] ="newUser.password" name="password" required (blur)="onPasswordBlur()" [class.invalid]="isFieldInvalid('password')" [class.filled]="newUser.password !==''">
+                <div *ngIf="isFieldInvalid('password')" class = "error-message">Password is required</div>
+            </div>
+            <div class ="form-group">
+                <label for="imgUrl">Profile Picture</label>
+                <input type="file" id="imgUrl" (change)="onFileSelected($event)" accept=".png, .jpg, .jpeg">
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+

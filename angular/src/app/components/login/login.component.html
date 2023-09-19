@@ -1,0 +1,29 @@
+<div class="background">
+    <header>
+        <h1>Crow Messenger</h1>
+        <div class="logo-container">
+            <img src="assets/img/logo.png"  class="logo">
+        </div>
+    </header>
+    <div class = "login-container">
+        <h2>Login</h2>
+        <form (ngSubmit)="loginForm()">
+            <div class ="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" [(ngModel)]="user.email" name="email" required>
+                <div *ngIf="incorrectEmail" class="error-message">{{errorMessage}}</div>
+            </div>
+            <div class ="form-group">
+                <label for="password">Password</label>
+                <input type="text" id="password"  [(ngModel)]="user.password" name="password" required>
+                <div *ngIf="incorrectPassword" class="error-message">{{errorMessage}}</div>
+            </div>
+            <button type="submit">Log in</button>
+        </form>
+        <div class="link">
+            <a class="custom" (click)="navigateToSignUp()">Don't have an account? Sign Up Here! </a>
+        </div>
+    </div>
+</div>
+
+

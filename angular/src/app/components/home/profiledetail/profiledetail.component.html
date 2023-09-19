@@ -1,0 +1,13 @@
+<nb-card class="dialog-card">
+    <nb-card-body>
+      <form (ngSubmit)="submit()" enctype="form-data">
+        <div class="form-group">
+          <input nbInput type="text" id="email" [(ngModel)]="email" name="email" placeholder="Enter friend's email to start chatting">
+        </div>
+        <div class="button-container">
+          <button class= "custom" nbButton outline type="submit" status="primary">Chat</button>
+        </div>
+      </form>
+    </nb-card-body>
+  </nb-card>
+  

@@ -1,0 +1,18 @@
+<div *ngIf="friend"class="chat-window">
+    <div class="receiver-info">
+        <img *ngIf="friend" class="profile-picture" [src]="friend.imgUrl">
+        <h3  *ngIf="friend" class="friend-name">{{ friend.username }}</h3>
+    </div>
+    <div class="message-list">
+        <div *ngFor="let message of messages" class="message" [ngClass]="{'sent': message.senderId==nMessage.getSenderId(),'recv': message.senderId!=nMessage.getSenderId()}">
+            {{ message.content}}
+        </div>
+    </div>
+    <div class="message-input">
+            <textarea type="text" [(ngModel)]="newMessage" placeholder="Type a message here" autoResize></textarea>
+            <button (click)="sendMessage()">
+                <i class="fa fa-paper-plane"></i> Send
+            </button>
+    </div>
+</div>
+            

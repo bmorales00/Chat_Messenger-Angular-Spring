@@ -1,0 +1,24 @@
+.dialog-card {
+
+  width: 400px;
+  max-width: 100%;
+  background-color: #f0f2f5;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+    
+  }
+  ::ng-deep .form-group input {
+    width: 100%;
+    
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  .custom{
+    background: linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);;
+    color: white;
+  }
